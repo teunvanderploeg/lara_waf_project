@@ -185,4 +185,14 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Blocked IP addresses
+    |--------------------------------------------------------------------------
+    |
+    | This array of IP addresses will be blocked
+    |
+    */
+    'blocked_ips' => [],
 ];
