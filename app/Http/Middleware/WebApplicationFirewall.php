@@ -27,6 +27,11 @@ class WebApplicationFirewall
         }
         RateLimiter::hit('request:'.$request->ip());
 
+        // Check if user agent is empty
+        if (empty($request->userAgent())) {
+            abort(403, "The request has an empty user agent.");
+        }
+
         return $next($request);
     }
 }
