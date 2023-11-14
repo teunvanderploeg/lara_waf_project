@@ -11,13 +11,6 @@ services:
         ports:
             - 8000:8000
 
-    queue:
-        container_name: Queue
-        build:
-            context: .
-            dockerfile: Dockerfile
-        command: 'php artisan queue:work'
-
 networks:
     laravel-exa:
         driver: bridge
